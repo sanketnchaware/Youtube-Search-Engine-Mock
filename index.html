@@ -127,7 +127,7 @@
     <script src="env.js"></script>
 
     <script>
-      const api_key = "AIzaSyAC3sy20lmS-JmHGom_o48-ZPX3unNDZco";
+    
       const div = document.getElementById("data_div");
 
       async function youtube(e) {
@@ -138,7 +138,7 @@
 
         try {
           const res = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=${api_key}&maxResults=20`
+            `https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyAC3sy20lmS-JmHGom_o48-ZPX3unNDZco&maxResults=20`
           );
           const data = await res.json();
 
@@ -157,7 +157,7 @@
         div.innerHTML = "";
         try {
           const res = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&key=${api_key}&maxResults=20`
+            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&key=AIzaSyAC3sy20lmS-JmHGom_o48-ZPX3unNDZco&maxResults=20`
           );
           const data = await res.json();
 
